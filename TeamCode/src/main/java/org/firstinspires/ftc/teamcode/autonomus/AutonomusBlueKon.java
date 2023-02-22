@@ -62,7 +62,7 @@ public class AutonomusBlueKon extends LinearOpMode {
             R.dr.followDirection(0, 0, 0, false, false);
             R.dr.GoAngle(0);
             R.dr.followDirection(1, -0.2, 0, false, false);
-            sleep(timeX);
+            sleep(timeY);
             R.dr.followDirection(0, 0, 0, false, false);
             R.dr.GoAngle(0);
             R.dr.followDirection(0, 1, 0, false, false);
