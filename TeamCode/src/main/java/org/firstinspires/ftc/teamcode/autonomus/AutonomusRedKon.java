@@ -8,7 +8,7 @@ import org.firstinspires.ftc.teamcode.robot.Robot;
 @Autonomous
 public class AutonomusRedKon extends LinearOpMode {
     public static int timeX = 1000;
-    public static int timeY = 1300;
+    public static int timeY = 2300;
     public static int pos = 21;
     public static double voltage = 12.74;
 

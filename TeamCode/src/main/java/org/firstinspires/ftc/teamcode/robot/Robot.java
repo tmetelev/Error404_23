@@ -87,7 +87,7 @@ public class Robot {
 
     public void teleLoop() throws InterruptedException {
         while (li.opModeIsActive()) {
-            dr.followDirection(-gamepad1.left_stick_x, -gamepad1.left_stick_y,
+            dr.followDirection(-gamepad2.left_stick_x, -gamepad2.left_stick_y,
                     gamepad1.right_trigger - gamepad1.left_trigger, gamepad1.a, gamepad1.b);
             elv.EvevatorMove(gamepad2.right_stick_y * 0.5);
             claw.ClawMove(gamepad1.right_bumper);
