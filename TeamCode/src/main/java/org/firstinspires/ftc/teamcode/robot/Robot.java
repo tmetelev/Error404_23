@@ -89,8 +89,8 @@ public class Robot {
         while (li.opModeIsActive()) {
             dr.followDirection(-gamepad1.left_stick_x, -gamepad1.left_stick_y,
                     gamepad1.right_trigger - gamepad1.left_trigger, gamepad1.a, gamepad1.b);
-            elv.EvevatorMove(gamepad2.right_stick_y * 0.5);
-            claw.ClawMove(gamepad1.right_bumper);
+            elv.EvevatorMove(gamepad2.right_stick_y * 9000);
+            claw.ClawMove(gamepad1.x);
 //            tele.addData("encoder", dr.fr.getCurrentPosition());
             tele.update();
 
