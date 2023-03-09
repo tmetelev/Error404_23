@@ -1,5 +1,6 @@
 package org.firstinspires.ftc.teamcode.OpenCV;
 
+import com.acmerobotics.dashboard.FtcDashboard;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
@@ -23,8 +24,8 @@ public class CameraTest1 extends LinearOpMode {
             @Override
             public void onOpened()
             {
+                camera.setViewportRenderer(OpenCvCamera.ViewportRenderer.GPU_ACCELERATED);
                 camera.startStreaming(1280, 720, OpenCvCameraRotation.UPRIGHT);
-                camera.setViewportRenderingPolicy(OpenCvCamera.ViewportRenderingPolicy.OPTIMIZE_VIEW);
                 camera.setPipeline(pipeline);
             }
             @Override
@@ -35,6 +36,10 @@ public class CameraTest1 extends LinearOpMode {
                  */
             }
         });
+
+        FtcDashboard dashboard = FtcDashboard.getInstance();
+        dashboard.startCameraStream(camera, 30);
+        dashboard.setTelemetryTransmissionInterval(500);
 
         waitForStart();
     }
