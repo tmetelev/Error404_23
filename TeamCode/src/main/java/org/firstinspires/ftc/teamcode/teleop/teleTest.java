@@ -11,6 +11,7 @@ public class teleTest extends LinearOpMode {
     public void runOpMode() throws InterruptedException {
         Robot R = new Robot();
         R.init(this);
+
         
         waitForStart();
 

@@ -13,9 +13,9 @@ public class Claw {
     HardwareMap hwd;
 
     public static double closeA = 0.45;
-    public static double openA = 0.8;
+    public static double openA = 0.73;
     public static double closeB = 0.5;
-    public static double openB = 0.2;
+    public static double openB = 0.26;
 
     public Claw(HardwareMap hwd, Robot R) {
         this.R = R;
