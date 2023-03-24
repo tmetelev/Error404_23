@@ -39,7 +39,7 @@ import java.util.ArrayList;
 
 public class AprilTagAutonomousInitDetection
 {
-    OpenCvCamera camera;
+    public OpenCvCamera camera;
     AprilTagDetectionPipeline aprilTagDetectionPipeline;
 
     static final double FEET_PER_METER = 3.28084;
