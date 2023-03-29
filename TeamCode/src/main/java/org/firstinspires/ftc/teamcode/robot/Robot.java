@@ -33,8 +33,8 @@ public class Robot {
     public DriveTrain dr;
     HardwareMap hwd;
     Telemetry tele;
-    Gamepad gamepad1, gamepad2;
-    LinearOpMode li;
+    public Gamepad gamepad1, gamepad2;
+    public LinearOpMode li;
     Elevator elv;
     public Claw claw;
     public VoltageSensor voltageSensor;
@@ -89,11 +89,16 @@ public class Robot {
         while (li.opModeIsActive()) {
             dr.followDirection(-gamepad1.left_stick_x, -gamepad1.left_stick_y,
                     gamepad1.right_trigger - gamepad1.left_trigger, gamepad1.a, gamepad1.b);
-            elv.EvevatorMove(gamepad2.right_stick_y * 0.5);
+            elv.ElevatorMove(gamepad2.right_stick_y * 0.5);
             claw.ClawMove(gamepad1.right_bumper);
-//            tele.addData("encoder", dr.fr.getCurrentPosition());
+            if (gamepad2.y) {
+               elv.ElevatorButton();
+            }
+            if (gamepad2.b) {
+                elv.ElevatorLow();
+            }
+            tele.addData("encoder", elv.elevator.getCurrentPosition());
             tele.update();
-
         }
     }
 }
